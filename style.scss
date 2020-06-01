@@ -1,0 +1,278 @@
+$par-color : #30336b;
+$par-impor-color :#6F1E51;
+%skillsPoint {
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-style: italic;
+    color: $par-color
+}
+body {
+    background-color: #009999;
+}
+body ::selection {
+    background-color: black;
+    color:white
+  }
+/* start navbar */
+.grid {
+    display: grid;
+    column-gap: 30%;
+    grid-template-columns: auto auto;
+}
+.navbar-dark .navbar-toggler {
+    border: 2px solid #099;
+    border-radius: 20%;
+}
+/* end navbar */
+/* start body of Home */
+.row {
+    margin: 0;
+    padding: 0;
+}
+.summary, .img {
+    text-align: center;
+    padding-top: 20px;
+}
+.summary p {
+    width: 80%;
+    margin: 20px auto ;
+    line-height: 32px;
+    font-size: 21px;
+    font-style: italic;
+    color: $par-color;
+    font-weight: bold;
+}
+.summary {
+    p {
+        span {
+            color: $par-impor-color;
+            font-weight: bold;
+        }
+    }
+}
+.summary p:last-of-type {
+    margin-top: 15%;
+    padding: 10px;
+    color: #dcdde1;
+    font-family: 'Charm', Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 30px;
+    text-align: center;
+}
+#myphoto {
+    height: 700px;
+}
+@media (max-width:1020px) {
+    .summary, .summary p {
+        padding: 0;
+    }
+}
+/* end body of Home */
+/* start carousal  */
+.carousel-control-next, 
+.carousel-control-prev {
+    position: absolute;
+    width: 5%;
+}
+.carousel-control-next-icon, 
+.carousel-control-prev-icon {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 300px;
+}
+.row .details {
+    padding: 4% 2% 3% 8%;
+}
+.row .details h4 {
+    font-weight: bold;
+}
+.row .details h4, .row .details h5 {
+    color:$par-impor-color;
+}
+.row .details h6 {
+    color: $par-color
+}
+.row .details .par {
+    font-size: 20px;
+    font-weight: bold;
+    color: $par-color;
+}
+.row .details li {
+    @extend %skillsPoint;
+}
+.row .img > div {
+    margin-bottom: 15%;
+}
+.row .img > div img {
+    width: 80% ;
+}
+.row .second {
+    padding-top: 150px;
+}
+.row .fourth {
+    margin-top: 10%;
+}
+
+@media screen and(max-width:1020px) {
+    .row .img {
+        padding-top: 0;
+        margin-top: 0;
+        padding-left: 15%;
+    }
+    .row .img > div{
+        margin-bottom: 40px;
+        float: left ;
+        width: 30%;
+        padding-left:20px
+    }
+    .row .second > div {
+        width: 50%;
+    }
+    .row .third > div {
+        width: 25%;
+    }
+    .row .fourth > div {
+        width:100%;
+        margin-top: 0;
+    }
+    .row .third .img1 {
+        padding-top:20px;
+    }
+    .row .img .img2, .img3, .img4 {
+        padding-top: 8%;
+    }
+    .row .img >.itc {
+        padding-top: 10px;
+    }
+}
+/* end carousal  */
+/* start personal info */
+.info {
+    margin: auto;
+    width: 70%;
+    padding-top: 3%;
+}
+.info h3, .skills h3, .contact h3 {
+    color: #dcdde1;
+    font-family: 'Charm', Arial, Helvetica, sans-serif;
+    font-size: 27px;
+    font-weight: bold;
+    line-height: 30px;
+}
+.info table {
+    margin-top: 3%;
+}
+.info table tr{
+    border: 2px solid #099;
+    border-radius: 50%;
+}
+.info table td {
+    color: $par-color;
+    font-weight: bold;
+    font-size: 22px;
+}
+.info table td:first-of-type {
+    width: 50%;
+    padding: 20px 10px;
+    text-transform: uppercase;
+    color : $par-impor-color;
+    font-size: 20px;
+    font-family: 'Charm', Arial, Helvetica, sans-serif;
+}
+@media (max-width:1020px) {
+    .info {
+        width: 90%;
+    }
+    .info table td {
+        font-size: 15px;
+    }
+}
+/* end personal info */
+/* start skills page */
+.skills .row {
+    padding: 30px 0 0 20px;
+}
+
+.skills .row .left li {
+    @extend %skillsPoint;
+    color: $par-color;
+    margin-right: 30px;
+}
+.skills .row .left .checked {
+    color: $par-impor-color
+}
+.skills .row .left .unchecked {
+    color: darkgray
+}
+.skills .row .right ul {
+    padding-top: 20px;
+    margin: 0.75em 0;  
+    padding: 0 1em;  
+}
+.right .fa-ul .fa-li {
+    color:$par-impor-color;
+}
+.skills .row .right h5 {
+    color: $par-impor-color;
+}
+.skills .row .right h6 {
+    color: $par-color;
+}
+@media (max-width:1020px) {
+    .skills .row .right {
+        margin-top: 50px;
+        padding-left: 1px;
+    }
+    .skills .row .left {
+        padding: 1px;
+    }
+    .skills .row .left li {
+        margin-right: 0;
+    }
+}
+/* end skills page */
+/* start contact */
+.contact {
+    width: 90%;
+    margin: auto;
+    padding-top: 13%;
+    padding-left: 10%;
+}
+.address, .email, .linkdin, .whatsapp {
+    width: 50%;
+    float: left;
+    margin-top: 50px;
+    padding-left: 20px;
+}
+.address span, .email span, .linkdin span , .whatsapp span{
+    color: $par-impor-color;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 12px;
+}
+.address p, .email p, .linkdin p, .whatsapp p {
+    padding-top: 20px;
+    color: $par-color;
+    font-size: 17px;
+    font-weight: bold;
+    font-style: italic;
+}
+.address p:hover, .email p a:hover, .linkdin p a:hover, .whatsapp p:hover {
+    color: white;
+    text-decoration: none;
+}
+.email p a, .linkdin p a {
+    color:$par-color
+}
+.contact .fa {
+    color: white
+}
+@media (max-width:1020px) {
+    .address, .email, .linkdin {
+        width: 100%;
+    }
+}
+/* end contact */
